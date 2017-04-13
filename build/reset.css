@@ -1,0 +1,11 @@
+html, body, div, main, h1, h2, h3, p, ul, li, button, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300 !important;
+}
+
+li {
+  list-style-type: none;
+}
