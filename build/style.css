@@ -274,28 +274,6 @@ h3 {
   letter-spacing: 1px;
 }
 
-.down-arrow-container {
-  position: absolute;
-  bottom: 100px;
-  left: calc(50vw - 25px);
-}
-
-.landing-typing {
-  min-width: 40px;
-}
-
-.full-width {
-  width: 100%;
-}
-
-.landing-down-arrow {
-  font-size:25px;
-}
-
-.landing-down-arrow:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-}
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -304,10 +282,4 @@ h3 {
 
 ::-webkit-scrollbar-thumb {
   background: transparent;
-}
-
-/* material ui components */
-
-.app-bar {
-  background-color: #f73057;
 }
