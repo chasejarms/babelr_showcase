@@ -16,9 +16,6 @@ export default class CallToAction extends React.Component {
   render() {
     return(
       <div className='full-screen call-to-action'>
-        <h1>GLOBAL COMMUNICATION MADE SIMPLE</h1>
-        <p>Babelr makes it easy for users to communicate by translating every message into the preferred language of the user.</p>
-        <button>Scroll Down To See Demo</button>
       </div>
     );
   }

@@ -137,6 +137,12 @@ lighterGrey: #cbccce;
   justify-content: space-around;
 }
 
+.three-user-demo-screen {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0px;
+}
+
 .avatar-image {
   height: 70px;
   width: 70px;
@@ -145,7 +151,7 @@ lighterGrey: #cbccce;
 
 .text-with-avatar {
   width: 268px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: flex;
 }
 
@@ -165,6 +171,29 @@ lighterGrey: #cbccce;
 .role {
   color: #f73057;
 }
+
+.see-live-demo-container {
+  flex: 1 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.visible {
+  display: visible;
+}
+
+.hidden {
+  display: none;
+}
+/* start call to action page */
+
+.call-to-action {
+  background-color: #13131f;
+}
+
+
+/* end call to action page */
 
 
 
