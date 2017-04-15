@@ -9,7 +9,7 @@ export default class ThreeUserDemo extends React.Component {
 
   render() {
     return(
-      <div className=''>
+      <div className='chat-pane-container'>
         <UserAvatarAndDescription
           imageURL={this.props.imageURL}
           username={this.props.username}
