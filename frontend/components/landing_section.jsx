@@ -2,15 +2,18 @@ import React from 'react';
 import Scroll from 'react-scroll';
 import Iphone from './iphone';
 
+const scroller = Scroll.scroller;
+
 export default class LandingSection extends React.Component {
   constructor(props) {
     super(props);
-    this.scrollToBottom = this.scrollToBottom.bind(this);
+    this.scrollToDemo = this.scrollToDemo.bind(this);
   }
 
-  scrollToBottom() {
-    Scroll.animateScroll.scrollToBottom({
-      duration: 1000
+  scrollToDemo() {
+    scroller.scrollTo('threeUserDemo', {
+      duration: 500,
+      smooth: true
     });
   }
 
@@ -20,8 +23,8 @@ export default class LandingSection extends React.Component {
         <div className='landing-info'>
           <div className='landing-info-container'>
             <h1>GLOBAL COMMUNICATION <span>MADE SIMPLE</span></h1>
-            <h3>Babelr makes it easy for users to communicate by translating every message into the preferred language of the user.</h3>
-            <button>Scroll Down To See Demo</button>
+            <h3>Babelr makes it easy for international teams to communicate, allowing users to send and receive messages in their preferred language.</h3>
+            <button className='pill-button' onClick={this.scrollToDemo}>View Demo</button>
           </div>
         </div>
         <div className='landing-iphone'>

@@ -11,6 +11,14 @@ h1 {
   font-size: 35px;
 }
 
+h3 {
+  font-size: 25px;
+}
+
+p, button {
+  font-size: 18px;
+}
+
 li {
   list-style-type: none;
 }

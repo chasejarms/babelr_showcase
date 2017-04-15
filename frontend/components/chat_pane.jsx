@@ -10,7 +10,12 @@ export default class ThreeUserDemo extends React.Component {
   render() {
     return(
       <div className=''>
-        <UserAvatarAndDescription imageUrl={this.props.imageUrl} description={this.props.description}/>
+        <UserAvatarAndDescription
+          imageURL={this.props.imageURL}
+          username={this.props.username}
+          location={this.props.location}
+          role={this.props.role}
+          />
         <Iphone gifUrl={this.props.gifUrl}/>
       </div>
     );
