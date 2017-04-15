@@ -1,7 +1,7 @@
 import React from 'react';
 // <img src={this.props.gifUrl}></img>
 
-export default class iPhone extends React.Component {
+export default class Iphone extends React.Component {
   constructor(props) {
     super(props);
   }
