@@ -21,22 +21,31 @@ lighterGrey: #cbccce;
 
 .landing-screen {
   display: flex;
+  background: url('./images/landing_page_grayscale.jpg') center center;
 }
 
-.landing-info {
+.landing-screen.full-screen {
+  padding-right: 0px;
+}
+
+.landing-screen h1, .landing-screen h3 {
+  color: #f5f5f5;
+}
+
+.landing-screen h1 span {
+  color: #f73057;
+  font-weight: 400;
+}
+
+.landing-info, .landing-iphone{
   flex: 0 0 50%;
   display: flex;
   align-items: center;
 }
 
-.landing-iphone {
-  justify-content: flex-end;
-}
-
 .landing-info-container {
   height: 550px;
 }
-
 /* end landing screen styling */
 
 /* start iphone styling */

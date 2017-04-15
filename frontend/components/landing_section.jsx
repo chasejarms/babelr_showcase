@@ -19,8 +19,8 @@ export default class LandingSection extends React.Component {
       <div className='full-screen landing-screen'>
         <div className='landing-info'>
           <div className='landing-info-container'>
-            <h1>GLOBAL COMMUNICATION MADE SIMPLE</h1>
-            <p>Babelr makes it easy for users to communicate by translating every message into the preferred language of the user.</p>
+            <h1>GLOBAL COMMUNICATION <span>MADE SIMPLE</span></h1>
+            <h3>Babelr makes it easy for users to communicate by translating every message into the preferred language of the user.</h3>
             <button>Scroll Down To See Demo</button>
           </div>
         </div>

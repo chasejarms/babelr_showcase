@@ -3,7 +3,12 @@ html, body, div, main, h1, h2, h3, p, ul, li, button, span {
   padding: 0;
   border: 0;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300 !important;
+  font-weight: 300;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 35px;
 }
 
 li {
