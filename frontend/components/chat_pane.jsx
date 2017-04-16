@@ -15,7 +15,7 @@ export default class ThreeUserDemo extends React.Component {
           username={this.props.username}
           location={this.props.location}
           role={this.props.role}
-          infoClass={this.props.infoClass}
+          visible={this.props.visible}
           />
         <Iphone gifUrl={this.props.gifUrl}/>
       </div>

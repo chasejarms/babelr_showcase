@@ -1,6 +1,7 @@
 import React from 'react';
 import Scroll from 'react-scroll';
 import ChatPane from './chat_pane';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const Element = Scroll.Element;
 
@@ -11,29 +12,11 @@ export default class ThreeUserDemo extends React.Component {
       showFirst: true,
       showSecond: true,
       showThird: true,
-      showButton: false
+      showButton: false,
+      sensorVisible: false
     }
     this.scrollToBottom = this.scrollToBottom.bind(this);
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.showFirst && !this.state.showfirst) {
-      setTimeout(() => {
-        this.setState({ showSecond: false })
-      }, 300);
-    } else if (prevState.showSecond && !this.state.showSecond) {
-      setTimeout(() => {
-        this.setState({ showThird: false })
-      }, 300);
-    } else if (prevState.showThird && !this.state.showThird) {
-      setTimeout(() => {
-        this.setState({ showButton: true })
-      }, 300);
-    }
-  }
-
-  componentDidMount() {
-    this.unveilPage();
+    this.unveilPage = this.unveilPage.bind(this);
   }
 
   scrollToBottom() {
@@ -42,38 +25,51 @@ export default class ThreeUserDemo extends React.Component {
     });
   }
 
-  unveilPage() {
-    setTimeout(() => {
-      this.setState({ showFirst: false })
-    }, 4000)
+  unveilPage(isVisible) {
+    if (isVisible && !this.state.sensorVisible) {
+      setTimeout(() => {
+        this.setState({ showFirst: false, sensorVisible: true });
+      }, 4000);
+      setTimeout(() => {
+        this.setState({ showSecond: false })
+      }, 4300);
+      setTimeout(() => {
+        this.setState({ showThird: false })
+      }, 4600);
+      setTimeout(() => {
+        this.setState({ showButton: true })
+      }, 4900);
+    }
   }
 
   render() {
-    const showButton = this.state.showButton ? 'visible' : 'hidden';
+    const showButton = this.state.showButton ? 'visible' : '';
+    const { showFirst, showSecond, showThird } = this.state;
     return(
       <div>
         <Element name='threeUserDemo'></Element>
         <div className='full-screen three-user-demo-screen'>
           <div className='three-user-demo'>
+            <VisibilitySensor onChange={this.unveilPage}/>
             <ChatPane
               imageURL='https://facebook.github.io/react/img/logo_og.png'
               username='Tom'
               location='United States'
               role='Project Manager'
-              infoClass={ this.state.showFirst ? 'visible' : 'hidden' }
+              visible={showFirst}
               gifUrl='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwj29cm5kKXTAhXHqFQKHQ3bB-0QjRwIBw&url=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F38278294%2Freact-unexpected-behavior-possibly-caused-by-passing-functions-as-props&psig=AFQjCNFoE_Gq-Wn6Qzc6FFeXjiih0zUo8Q&ust=1492299891762737' />
             <ChatPane
               imageURL='https://facebook.github.io/react/img/logo_og.png'
               username='Camila'
               location='Paraguay'
               role='Software Engineer'
-              infoClass={ this.state.showSecond ? 'visible' : 'hidden' }
+              visible={showSecond}
               gifUrl='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwj29cm5kKXTAhXHqFQKHQ3bB-0QjRwIBw&url=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F38278294%2Freact-unexpected-behavior-possibly-caused-by-passing-functions-as-props&psig=AFQjCNFoE_Gq-Wn6Qzc6FFeXjiih0zUo8Q&ust=1492299891762737' />
             <ChatPane
               imageURL='https://facebook.github.io/react/img/logo_og.png'
               username='Abram'
               location='Russia'
-              infoClass={ this.state.showThird ? 'visible' : 'hidden' }
+              visible={showThird}
               role='Graphic Designer'
               gifUrl='https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwj29cm5kKXTAhXHqFQKHQ3bB-0QjRwIBw&url=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F38278294%2Freact-unexpected-behavior-possibly-caused-by-passing-functions-as-props&psig=AFQjCNFoE_Gq-Wn6Qzc6FFeXjiih0zUo8Q&ust=1492299891762737' />
           </div>

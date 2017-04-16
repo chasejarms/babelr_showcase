@@ -6,9 +6,10 @@ export default class UserAvatarAndDescription extends React.Component {
   }
 
   render() {
-    const { username, location, role, infoClass } = this.props;
+    const { username, location, role } = this.props;
+    const visible = this.props.visible ? 'active' : 'collapse';
     return(
-      <div className={`text-with-avatar ${infoClass}`}>
+      <div className={`text-with-avatar ${visible}`}>
         <img
           className='avatar-image'
           src={ this.props.imageURL }

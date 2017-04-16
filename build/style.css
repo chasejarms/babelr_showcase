@@ -132,6 +132,13 @@ lighterGrey: #cbccce;
 
 /* three user page */
 
+.chat-pane-container {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .three-user-demo {
   display: flex;
   justify-content: space-around;
@@ -151,8 +158,18 @@ lighterGrey: #cbccce;
 
 .text-with-avatar {
   width: 268px;
-  margin-bottom: 30px;
   display: flex;
+  flex: 1 1 100px;
+  justify-content: center;
+  opacity: 1;
+}
+
+.collapse {
+  flex: 0 0 0px;
+  overflow: hidden;
+  transition-duration: .5s;
+  transition-property: all;
+  padding-bottom: 0px;
 }
 
 .user-info-container {
@@ -173,18 +190,17 @@ lighterGrey: #cbccce;
 }
 
 .see-live-demo-container {
-  flex: 1 1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
+  flex: 1 1;
+  visibility: hidden;
 }
 
 .visible {
-  display: visible;
-}
-
-.hidden {
-  display: none;
+  visibility: visible;
+  transition-duration: 3s;
+  transition-property: all;
 }
 /* start call to action page */
 
