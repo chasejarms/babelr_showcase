@@ -195,12 +195,14 @@ lighterGrey: #cbccce;
   justify-content: center;
   flex: 1 1;
   visibility: hidden;
+  opacity: 0;
 }
 
 .visible {
   visibility: visible;
   transition-duration: 3s;
   transition-property: all;
+  opacity: 1;
 }
 /* start call to action page */
 
