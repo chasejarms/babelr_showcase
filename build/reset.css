@@ -22,3 +22,7 @@ p, button {
 li {
   list-style-type: none;
 }
+
+iframe {
+  border-width: 0px !important;
+}

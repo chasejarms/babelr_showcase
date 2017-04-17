@@ -219,8 +219,10 @@ lighterGrey: #cbccce;
 
 .call-to-action {
   background-color: #13131f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 /* end call to action page */
 
