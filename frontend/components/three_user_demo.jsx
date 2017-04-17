@@ -36,9 +36,6 @@ export default class ThreeUserDemo extends React.Component {
       setTimeout(() => {
         this.setState({ showThird: false })
       }, 4600);
-      // setTimeout(() => {
-      //   this.setState({ showButton: true })
-      // }, 4900);
     }
   }
 

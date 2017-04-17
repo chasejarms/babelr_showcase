@@ -13,7 +13,8 @@ export default class Iphone extends React.Component {
           <div className='camera'></div>
           <div className='speaker'></div>
         </div>
-        <div className='iphone-screen'>
+        <div className='iphone-screen babelr-authentication-screen'>
+          //
         </div>
         <div className='iphone-bottom'>
           <div className='iphone-button'></div>

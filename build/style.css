@@ -40,11 +40,11 @@ lighterGrey: #cbccce;
 
 .landing-screen {
   display: flex;
-  background: url('./images/landing_page_grayscale.jpg') center center;
 }
 
 .landing-screen.full-screen {
   padding-right: 0px;
+  background-color: #13131f;
 }
 
 .landing-screen h1, .landing-screen h3 {
@@ -104,6 +104,7 @@ lighterGrey: #cbccce;
   overflow-y: auto;
   margin: 0 10px;
   background-color: #13131f;
+  overflow: hidden;
 }
 
 .iphone-button {
@@ -127,6 +128,12 @@ lighterGrey: #cbccce;
   background-color: #959697;
   border-radius: 10px;
 }
+
+.babelr-authentication-screen {
+  background: url('./images/babelr_authentication.png') center center;
+  background-size: 249px;
+}
+
 
 /* end iphone styling */
 
