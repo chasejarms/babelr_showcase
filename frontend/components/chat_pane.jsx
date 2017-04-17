@@ -9,7 +9,7 @@ export default class ThreeUserDemo extends React.Component {
   }
 
   render() {
-    const { imageURL, username, location, role, visible, iphoneScreenClass, videoURL } = this.props;
+    const { imageURL, username, location, role, visible, iphoneScreenClass, videoURL, bandaid, classId, color } = this.props;
     const unveilPage = this.props.unveilPage ?  <VisibilitySensor onChange={this.props.unveilPage}/> : undefined;
     return(
       <div className='chat-pane-container'>
@@ -24,6 +24,9 @@ export default class ThreeUserDemo extends React.Component {
         <Iphone
           iphoneScreenClass={iphoneScreenClass}
           videoURL={videoURL}
+          bandaid={bandaid}
+          classId={classId}
+          color={color}
           />
       </div>
     );

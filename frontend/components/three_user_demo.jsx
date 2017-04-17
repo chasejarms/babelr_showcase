@@ -27,6 +27,11 @@ export default class ThreeUserDemo extends React.Component {
   unveilPage(isVisible) {
     if (isVisible && !this.state.sensorVisible) {
       setTimeout(() => {
+        document.getElementById('chat-one').play();
+        document.getElementById('chat-two').play();
+        document.getElementById('chat-three').play();
+      }, 500);
+      setTimeout(() => {
         this.setState({ showFirst: false, sensorVisible: true });
       }, 4000);
       setTimeout(() => {
@@ -41,6 +46,7 @@ export default class ThreeUserDemo extends React.Component {
   render() {
     const showButton = this.state.showButton ? 'visible' : '';
     const { showFirst, showSecond, showThird } = this.state;
+    const black = { color: '#151515' };
     return(
       <div>
         <Element name='threeUserDemo'></Element>
@@ -53,21 +59,28 @@ export default class ThreeUserDemo extends React.Component {
               location='United States'
               role='Project Manager'
               visible={showFirst}
-              videoURL='https://s3-us-west-1.amazonaws.com/babelr/demo_page/videos/demo_chat.mov' />
+              videoURL='https://s3-us-west-1.amazonaws.com/babelr/demo_page/videos/tom_chat.mov'
+              bandaid='bandaid-class'
+              classId='chat-one'
+              color={black} />
             <ChatPane
               imageURL='https://facebook.github.io/react/img/logo_og.png'
               username='Camila'
               location='Paraguay'
               role='Software Engineer'
               visible={showSecond}
-              videoURL='https://s3-us-west-1.amazonaws.com/babelr/demo_page/videos/demo_chat.mov' />
+              videoURL='https://s3-us-west-1.amazonaws.com/babelr/demo_page/videos/camila_chat.mov'
+              classId='chat-two'
+              color={black} />
             <ChatPane
               imageURL='https://facebook.github.io/react/img/logo_og.png'
               username='Abram'
               location='Russia'
               visible={showThird}
               role='Graphic Designer'
-              videoURL='https://s3-us-west-1.amazonaws.com/babelr/demo_page/videos/demo_chat.mov' />
+              videoURL='https://s3-us-west-1.amazonaws.com/babelr/demo_page/videos/abram_chat.mov'
+              classId='chat-three'
+              color={black} />
           </div>
           <div className={`see-live-demo-container ${showButton}`}>
             <button className='pill-button' onClick={this.scrollToBottom}>TRY IT LIVE</button>

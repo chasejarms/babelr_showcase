@@ -13,7 +13,8 @@ export default class Iphone extends React.Component {
           className='iphone-video'
           autoplay='true'
           preload='auto'
-          src={this.props.videoURL}>
+          src={this.props.videoURL}
+          id={this.props.classId}>
         </video>
       )
     } else {
@@ -22,16 +23,17 @@ export default class Iphone extends React.Component {
   }
 
   render() {
+    const { color } = this.props;
     return(
-      <div className='iphone-outer'>
-        <div className='iphone-top'>
+      <div style={color} className='iphone-outer'>
+        <div style={color} className='iphone-top'>
           <div className='camera'></div>
           <div className='speaker'></div>
         </div>
         <div className={`iphone-screen ${this.props.iphoneScreenClass}`}>
           { this.createVideo() }
         </div>
-        <div className='iphone-bottom'>
+        <div style={color} className='iphone-bottom'>
           <div className='iphone-button'></div>
         </div>
       </div>
