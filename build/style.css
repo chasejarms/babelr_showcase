@@ -82,8 +82,8 @@ lighterGrey: #cbccce;
 }
 
 .iphone-outer {
-  height: 550px;
-  width: 268px;
+  height: 582px;
+  width: 269px;
   display: flex;
   flex-direction: column;
   background-color: #f3f3f3;
@@ -132,6 +132,10 @@ lighterGrey: #cbccce;
 .babelr-authentication-screen {
   background: url('./images/babelr_authentication.png') center center;
   background-size: 249px;
+}
+
+.iphone-video {
+  width: 100%;
 }
 
 

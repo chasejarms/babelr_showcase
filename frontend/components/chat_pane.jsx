@@ -1,6 +1,7 @@
 import React from 'react';
 import UserAvatarAndDescription from './user_avatar_and_description';
 import Iphone from './iphone';
+import VisibilitySensor from 'react-visibility-sensor';
 
 export default class ThreeUserDemo extends React.Component {
   constructor(props) {
@@ -8,16 +9,22 @@ export default class ThreeUserDemo extends React.Component {
   }
 
   render() {
+    const { imageURL, username, location, role, visible, iphoneScreenClass, videoURL } = this.props;
+    const unveilPage = this.props.unveilPage ?  <VisibilitySensor onChange={this.props.unveilPage}/> : undefined;
     return(
       <div className='chat-pane-container'>
         <UserAvatarAndDescription
-          imageURL={this.props.imageURL}
-          username={this.props.username}
-          location={this.props.location}
-          role={this.props.role}
-          visible={this.props.visible}
+          imageURL={imageURL}
+          username={username}
+          location={location}
+          role={role}
+          visible={visible}
           />
-        <Iphone gifUrl={this.props.gifUrl}/>
+        { unveilPage }
+        <Iphone
+          iphoneScreenClass={iphoneScreenClass}
+          videoURL={videoURL}
+          />
       </div>
     );
   }

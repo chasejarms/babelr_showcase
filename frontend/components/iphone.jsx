@@ -1,9 +1,24 @@
 import React from 'react';
-// <img src={this.props.gifUrl}></img>
 
 export default class Iphone extends React.Component {
   constructor(props) {
     super(props);
+    this.createVideo = this.createVideo.bind(this);
+  }
+
+  createVideo() {
+    if (this.props.videoURL) {
+      return (
+        <video
+          className='iphone-video'
+          autoplay='true'
+          preload='auto'
+          src={this.props.videoURL}>
+        </video>
+      )
+    } else {
+      return undefined;
+    }
   }
 
   render() {
@@ -13,8 +28,8 @@ export default class Iphone extends React.Component {
           <div className='camera'></div>
           <div className='speaker'></div>
         </div>
-        <div className='iphone-screen babelr-authentication-screen'>
-          //
+        <div className={`iphone-screen ${this.props.iphoneScreenClass}`}>
+          { this.createVideo() }
         </div>
         <div className='iphone-bottom'>
           <div className='iphone-button'></div>

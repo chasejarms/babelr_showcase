@@ -24,11 +24,11 @@ export default class LandingSection extends React.Component {
           <div className='landing-info-container'>
             <h1>GLOBAL COMMUNICATION <span>MADE SIMPLE</span></h1>
             <h3>Babelr makes it easy for international teams to communicate, allowing users to send and receive messages in their preferred language.</h3>
-            <button className='pill-button' onClick={this.scrollToDemo}>View Demo</button>
+            <button className='pill-button' onClick={this.scrollToDemo}>VIEW DEMO</button>
           </div>
         </div>
         <div className='landing-iphone'>
-          <Iphone />
+          <Iphone iphoneScreenClass='babelr-authentication-screen'/>
         </div>
       </div>
     );
